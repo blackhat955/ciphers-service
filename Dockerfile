@@ -18,4 +18,4 @@ RUN pip install --upgrade pip &&  pip install -r ciphers_project/requirements.tx
 EXPOSE 8000
 
 # Run app.py when the container launches
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "ciphers_project/manage.py", "runserver", "0.0.0.0:8000"]
