@@ -27,6 +27,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['ciphers-service-2y4l.onrender.com']
 
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:5500",  # Add specific origins as needed
+    "http://localhost:3000",  # Example of another origin
+    "*",  # Allow requests from any origin
+]
+
 
 # Application definition
 
@@ -37,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'api.apps.ApiConfig',
     'rest_framework',
     
@@ -50,6 +57,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'ciphers_project.urls'
