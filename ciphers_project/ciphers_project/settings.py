@@ -31,7 +31,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5500",  # Add specific origins as needed
     "http://localhost:3000",  # Example of another origin
     "https://blackhat955.github.io",
-    "https://*",  # Allow requests from any HTTPS origin
+   # Allow requests from any HTTPS origin
 ]
 
 
@@ -58,8 +58,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+  
 ]
 
 ROOT_URLCONF = 'ciphers_project.urls'
