@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ['ciphers-service-2y4l.onrender.com']
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5500",  # Add specific origins as needed
     "http://localhost:3000",  # Example of another origin
-    "https://blackhat955.github.io/",
+    "https://blackhat955.github.io",
     "https://*",  # Allow requests from any HTTPS origin
 ]
 
